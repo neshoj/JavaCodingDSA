@@ -10,7 +10,6 @@ import java.util.Arrays;
  */
 public class RotateArray {
 
-
     public void rotateUseIntermediateArray(int[] nums, int k) {
         if (k > nums.length)
             k = k % nums.length;
@@ -33,6 +32,19 @@ public class RotateArray {
         System.arraycopy(result, 0, nums, 0, nums.length);
 
         System.out.println("3 result = " + Arrays.toString(result));
+    }
+
+    public void bubbleRotate(int[]arr, int order){
+        for(int i=0; i < order; i++){
+            for(int j = arr.length-1; j > 0; j--){
+                int temp = arr [j]; // temp=7
+                arr[j] = arr[j -1]; // arr[6] = 6
+                arr[j - 1] = temp;  // arr[5] = 7
+                // breaks after moving the last digit to the front
+            }
+        }
+
+        System.out.println("Bubble Sort Rotate = " + Arrays.toString(arr));
     }
 
 }
