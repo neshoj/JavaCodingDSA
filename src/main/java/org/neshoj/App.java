@@ -10,6 +10,7 @@ public class App
     {
         RotateArray ra = new RotateArray();
        int[] numArr = {1,2,3,4,5,6,7};
-        ra.rotate(numArr, 3);
+//        ra.rotateUseIntermediateArray(numArr, 3);
+        ra.bubbleRotate(numArr, 3);
     }
 }
